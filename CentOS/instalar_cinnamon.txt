@@ -1,0 +1,50 @@
+// https://www.rootusers.com/how-to-install-cinnamon-gui-in-centos-7-linux/
+
+
+
+Install Cinnamon In CentOS
+
+While there are many different graphical user interfaces available for Linux, in this example we will be using Cinnamon.
+
+First we need to configure the EPEL repository, as this is where we will be installing packages from.
+
+[root@centos7 ~]# yum install epel-release -y
+Next I needed to install the “Server with GUI” group before proceeding. Note that this will also install GNOME, you’ll be able to change to Cinnamon later though.
+
+[root@centos7 ~]# yum groupinstall "Server with GUI" -y
+Installing the Cinnamon Desktop is now as simple as installing the “cinnamon” package, which then has many dependencies to install many more packages that are required for a GUI installation.
+
+[root@centos7 ~]# yum install cinnamon -y
+Note that this may take a while, on my minimal installation I needed to download around 40 packages which took up about 135MB on top of the Server with GUI package group.
+
+Start The GUI
+
+By default after installing these packages, the default target should have automatically updated, meaning that after a reboot the GUI will automatically be loaded. We can check the current default target as shown below.
+
+[root@centos7 ~]# systemctl get-default
+graphical.target
+In this instance the target has been updated appropriately by installing these package groups. If it instead said multi-user.target, then you would need to update it manually.
+
+The target is similar to the old run levels, in this case multi-user.target is equivalent to run level 3 meaning that after a reboot the GUI will not be loaded here. We can set the default to the graphical.target which is equivalent to run level 5.
+
+[root@centos7 ~]# systemctl set-default graphical.target
+Removed symlink /etc/systemd/system/default.target.
+Created symlink from /etc/systemd/system/default.target to /usr/lib/systemd/system/graphical.target.
+
+[root@centos7 ~]# systemctl get-default
+graphical.target
+While this has changed the default target which is accessed during system boot, our current target is still the multi-user.target. We can change to the GUI by performing ‘systemctl isolate graphical.target’ which will change us to the GUI immediately.
+
+[root@centos7 ~]# systemctl isolate graphical.target
+Alternatively a system reboot would also work, as all future boots should boot to the graphical target by default.
+
+When you’re at the login screen, simply select the cog icon and pick Cinnamon, as shown below. This preference should be remembered and automatically selected for next time.
+
+Select Cinnamon at login
+
+Removing Cinnamon
+
+If you’ve installed the GUI on a server and realized that it was a terrible mistake, don’t worry! We can also undo this by simply using yum to remove the cinnamon package.
+
+[root@centos7 ~]# yum remove cinnamon
+Carefully read through the packages that will be removed and ensure that this looks correct prior to removing packages or dependencies.
