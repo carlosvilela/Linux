@@ -1,0 +1,68 @@
+Como mudar meu nome de distro Linux?
+Estou fazendo uma distro personalizada baseada no Fedora. Eu gostaria de mudar o nome do Fedora para o nome da minha distro. Eu sei como fazer isso no Ubuntu e Mint, mas não o Fedora. Qualquer ajuda é apreciada!
+
+
+ 
+
+respostaResposta
+0
+
+1) vá para o sistema de arquivos
+
+2) sempre abrir pasta como administrador
+
+Wallpaper de gdm mudança 3)
+
+
+ 
+
+
+ir para /usr/share/backgrounds/linuxmint como root (abrir como administrador) e substitua seu papel de parede Talent0-1. jpg.
+
+Nota: - sempre verifique as propriedades do arquivo original e fazer exatamente como o mesmo nome, a extensão, a resolução com o gimp ou outra ferramenta de edição caso contrário não vai funcionar!
+
+Ele vai mudar a parede login papel e depois o papel de parede (wallpaper desktop) de login
+
+4) alterar o ícone do menu
+
+/usr/lib/LinuxMint/mintMenu
+
+substituir a visualização-logo. png e mintMenu.png
+
+5) alterar o logotipo de inicialização
+
+/lib/Plymouth/Themes/Ubuntu-logo
+
+substituir todos os tipos de arquivos png
+
+muda o logotipo e a animação do ponto de carregamento
+
+Nota: se você quiser fazer seu próprio linux live CD/DVD usando o remastersys, instalar mac4lin.Isso vai ajudar você a obter o logotipo do carregador no seu próprio distro(optional)
+
+Você pode alterar todos os arquivos png de /lib/plymouth (opcional)
+
+6) mudar o nome oficial e virsion de distro(linux mint)
+
+/etc/LinuxMint/info mudar o nome e versão que já queres como e salvá-lo.
+
+7) se você tiver instalado o remastersys, para alterar o papel de parede do remastersys
+
+/etc/Remastersys/isolinux
+
+Repace Splash
+
+(quando você inicializar por sua distro você pode ver o seu papel de parede personalizado lá em vez de papel de parede do remastersys padrão)
+
+8) se você tiver instalado o cairo dock
+
+substituir todos os arquivos png como
+
+/usr/share/Cairo-Dock/plug-ins/Cairo-Penguin/Themes/Classic
+
+Se você quiser, você pode alterar qualquer arquivo png após cada subpasta do cairo-dock
+
+9) pode substituir mais png, jpg arquivo em outras pastas de sub também para distro mais atraente e instalar mais pacotes úteis e unstall pacotes inúteis.
+
+10) reinicie o computador e executar o remastersys e queimar arquivo iso em disco CD/DVD
+
+11) tem sua distro facilmente personalizado na sua hand.enjoy isso!
