@@ -1,0 +1,3 @@
+// pode ser mate-terminal - poderia ser o gnome-terminal, xterm, kterm... mas estou usando o xterm
+
+yum install xterm
