@@ -1,0 +1,2 @@
+Ctrl Alt F2 (acessar Terminal)
+Ctrl Alt F1 (sair do Terminal e voltar para o ambiente grafico cinnamonl)
