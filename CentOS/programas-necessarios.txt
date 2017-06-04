@@ -1,0 +1,5 @@
+Google Chrome
+Firefox
+Java JDK
+leafpad
+gnome-terminal
