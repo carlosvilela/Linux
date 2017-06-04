@@ -5,3 +5,4 @@ gnome-terminal
 
 leafpad // bloco de notas
 kolourpaint // igual o paint do windows
+7-zip // parecido com winrar
