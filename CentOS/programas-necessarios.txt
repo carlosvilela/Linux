@@ -2,7 +2,9 @@ Google Chrome
 Firefox
 Java JDK
 gnome-terminal
+
 yum groupinstall "Development Tools"
+yum install gtk+-devel gtk2-devel
 
 leafpad // bloco de notas
 kolourpaint // igual o paint do windows
