@@ -1,5 +1,7 @@
 Google Chrome
 Firefox
 Java JDK
-leafpad
 gnome-terminal
+
+leafpad // bloco de notas
+kolourpaint // igual o paint do windows
