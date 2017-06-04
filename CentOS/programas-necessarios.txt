@@ -9,3 +9,5 @@ yum install gtk+-devel gtk2-devel
 leafpad // bloco de notas
 kolourpaint // igual o paint do windows
 
+file-roller // ambiente grafico pala o winrar
+rarlinux da empresa rarlab // só entrar e baixar o winrar pra linux e descompactar, acho que o file-roller ja faz todo o trabalho de descompactar sem necessidade do rarlinux
