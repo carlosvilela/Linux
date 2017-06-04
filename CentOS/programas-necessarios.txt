@@ -2,7 +2,8 @@ Google Chrome
 Firefox
 Java JDK
 gnome-terminal
+yum groupinstall "Development Tools"
 
 leafpad // bloco de notas
 kolourpaint // igual o paint do windows
-7-zip // parecido com winrar
+
